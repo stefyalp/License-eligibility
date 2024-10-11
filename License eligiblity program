@@ -1,0 +1,37 @@
+/* This program will help you to find out your eligibility to renew your diver license, according to you age.
+If you are between 79, and 84 years old, you must always renew your driver license in person.
+If you are 84 years or older, you must check for additional requirements that apply to your range of age.
+If you do not fall into this category, you may be eligible to apply online, by phone or by mail.*/
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+using namespace std;
+int main()
+{
+int age;
+
+cout << "Enter your age to check for eligibility to renew your driver license : \n" << endl;
+cin >> age;
+	if (age < 18)
+	cout << "You are eligible to apply for a Provisional License.\n" << endl;
+	else if (age >= 18)
+	cout << "You are elibible to apply for a Class A, B ,C or M License.\n" << endl;
+	else if (age >= 79 && age <= 84)
+	/*if the person is 79 years or older they must renew in person*/
+	cout << "You must renew your driver license in-person at your local driver license office.\n"  << endl;
+	else if (age >= 85) 
+	/* If the person is 85 years they must renew in person, and every second birthday after their license previous expiration date.*/
+	cout << "You must renew your license on your second birthday after the previous expiration date.\n " << endl;
+	else
+	cout << "You may be eligible to renew your driver license online, by phone or by mail. Check for eligibility to renew your driver license online.\n\n";
+
+
+
+
+	system("pause");
+	return 0;
+
+
+}
